@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect } from "react";
+import React, { useLayoutEffect } from "react";
 import { CATEGORIES, MEALS } from "../data/dummy-data";
 import { StyleSheet, View, FlatList } from "react-native";
 import MealItem from "../components/MealItem";
@@ -22,6 +22,7 @@ const MealsOverviewScreen = ({ route, navigation }) => {
     const item = itemData.item;
 
     const mealItemProps = {
+      id: item.id,
       title: item.title,
       imageUrl: item.imageUrl,
       affordability: item.affordability,
